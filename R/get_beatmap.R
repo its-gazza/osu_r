@@ -7,20 +7,21 @@
 #' @export
 
 get_beatmap <- function(beatmap_id, key){
-  get_info <- GET("https://osu.ppy.sh/api/get_beatmaps",
-                  query =
-                    list(k = key,
-                         b = beatmap_id)
-                  )
+  get_info <- GET(
+    "https://osu.ppy.sh/api/get_beatmaps",
+    query =
+      list(k = key,
+           b = beatmap_id)
+  )
 
-  # Check if the api key is correct
+  # Check if the api key is valid
   if(get_info$status_code == 401){
-    return(warning("Wrong API key"))
+    return(warning("Invalid API key"))
   }
 
-  # Check if betamap id is correct
+  # Check if betamap id is Valid
   if(content(get_info, as = "text") == "[]"){
-    return(warning("Wrong beatmap id"))
+    return(warning("Invalid beatmap id"))
   }
 
   # Convert data to propert class
