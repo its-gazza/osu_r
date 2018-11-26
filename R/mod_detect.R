@@ -1,13 +1,13 @@
 #' Convert mod value to list of mods
 #'
-#' \code{mod_convert} converts enable_mod value to a list of character for selected mods
+#' \code{mod_detcts} converts enable_mod value to a list of character for selected mods
 #' For full mod list see https://github.com/ppy/osu-api/wiki#mods?t
 #'
 #' @param value enable_mod value
 #'
 #' @export
 
-mod_convert <- function(value){
+mod_detect <- function(value){
   # Convert value to binary
   string <- intToBits(value)
 
