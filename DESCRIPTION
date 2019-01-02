@@ -12,4 +12,6 @@ RoxygenNote: 6.1.1
 Imports:
   tidyverse,
   httr,
-  jsonlite
+  jsonlite,
+  magrittr
+  
