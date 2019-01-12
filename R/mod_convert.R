@@ -6,7 +6,7 @@
 #' @param key API key, used to get betamap info
 #'
 #' @export
-convert_mod <- function(beatmap_id, enable_mod, key){
+mod_convert <- function(beatmap_id, enable_mod, key){
 
   # First we'll need to get the beatmap info
   bm_info <- get_beatmap(beatmap_id, key) %>%
