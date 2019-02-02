@@ -5,7 +5,7 @@
 #' @param enalbe_mod mod applied. Note this takes in the numeric version of mod
 #'
 #' @export
-ar_convert <- function(ar, enable_mod){
+convert_ar <- function(ar, enable_mod){
   # Convert numeric mod to character mod
   mod_list <- mod_detect(enable_mod)
 
