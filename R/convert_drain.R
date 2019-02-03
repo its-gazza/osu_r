@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param diff_drain
+#' @param enabled_mods
+#'
+#' @return
+#' @export
+#'
+#' @examples
 convert_drain <- function(diff_drain, enabled_mods){
   mod <- mod_detect(enabled_mods)
 

@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param total_length
+#' @param enabled_mods
+#'
+#' @return
+#' @export
+#'
+#' @examples
 convert_total_length <- function(total_length, enabled_mods){
   mod <- mod_detect(enabled_mods)
   if(str_detect(mod, "DT")){

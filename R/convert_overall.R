@@ -2,6 +2,15 @@
 
 
 
+#' Title
+#'
+#' @param diff_overall
+#' @param enabled_mods
+#'
+#' @return
+#' @export
+#'
+#' @examples
 convert_overall <- function(diff_overall, enabled_mods){
   mod <- mod_detect(enabled_mods)
 

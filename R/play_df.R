@@ -1,4 +1,13 @@
 
+#' Title
+#'
+#' @param usr
+#' @param key
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_player_bm <- function(usr, key){
   player_info <- osur::get_player(usr, key)
   player_pp <- osur::get_player_pp(usr, key)

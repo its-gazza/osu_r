@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param diff_size
+#' @param enabled_mods
+#'
+#' @return
+#' @export
+#'
+#' @examples
 convert_size <- function(diff_size, enabled_mods){
   mod <- mod_detect(enabled_mods)
 

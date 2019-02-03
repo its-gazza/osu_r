@@ -1,3 +1,12 @@
+#' Title
+#'
+#' @param bpm
+#' @param enabled_mods
+#'
+#' @return
+#' @export
+#'
+#' @examples
 convert_bpm <- function(bpm, enabled_mods){
   mod <- mod_detect(enabled_mods)
   if(str_detect(mod, "DT")){
