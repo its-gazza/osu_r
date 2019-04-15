@@ -35,5 +35,6 @@ get_player_bm <- function(usr, key){
            diff_approach = mapply(convert_ar, diff_approach, enabled_mods),
            diff_drain = mapply(convert_drain, diff_drain, enabled_mods)
     )
+  return(play_df)
 
 }
