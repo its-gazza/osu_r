@@ -1,12 +1,10 @@
-#' Title
+#' Convert drain base on mod
 #'
-#' @param diff_drain
-#' @param enabled_mods
+#' @param diff_drain Drain difficulty
+#' @param enabled_mods Mods used
 #'
-#' @return
 #' @export
-#'
-#' @examples
+
 convert_drain <- function(diff_drain, enabled_mods){
   mod <- mod_detect(enabled_mods)
 

@@ -1,7 +1,7 @@
-#' Title
+#' Convert size base on mods
 #'
-#' @param diff_size
-#' @param enabled_mods
+#' @param diff_size Beatmap difficulty
+#' @param enabled_mods mods used
 #'
 #' @return
 #' @export

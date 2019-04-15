@@ -1,16 +1,11 @@
-
-
-
-
-#' Title
+#' Convert overall difficulrt
 #'
-#' @param diff_overall
-#' @param enabled_mods
+#' @param diff_overall Beatmap overall difficulty
+#' @param enabled_mods Mod used
 #'
-#' @return
+
 #' @export
-#'
-#' @examples
+
 convert_overall <- function(diff_overall, enabled_mods){
   mod <- mod_detect(enabled_mods)
 

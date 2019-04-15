@@ -1,12 +1,11 @@
-#' Title
+#' Convert BPM base on mod
 #'
-#' @param bpm
-#' @param enabled_mods
+#' @param bpm beatmap bpm
+#' @param enabled_mods Mods used
 #'
-#' @return
 #' @export
 #'
-#' @examples
+
 convert_bpm <- function(bpm, enabled_mods){
   mod <- mod_detect(enabled_mods)
   if(str_detect(mod, "DT")){

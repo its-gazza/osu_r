@@ -1,12 +1,10 @@
-#' Title
+#' Convert total length base on mod
 #'
-#' @param total_length
-#' @param enabled_mods
+#' @param total_length total length in beatmap
+#' @param enabled_mods mod used
 #'
-#' @return
 #' @export
 #'
-#' @examples
 convert_total_length <- function(total_length, enabled_mods){
   mod <- mod_detect(enabled_mods)
   if(str_detect(mod, "DT")){

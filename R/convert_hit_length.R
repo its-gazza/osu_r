@@ -1,12 +1,10 @@
-#' Title
+#' Convert hit length base on mods
 #'
-#' @param hit_length
-#' @param enabled_mods
+#' @param hit_length Beatmap length
+#' @param enabled_mods Mod used
 #'
-#' @return
 #' @export
-#'
-#' @examples
+
 convert_hit_length <- function(hit_length, enabled_mods){
   mod <- mod_detect(enabled_mods)
   if(str_detect(mod, "DT")){
