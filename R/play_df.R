@@ -10,7 +10,12 @@ get_player_bm <- function(usr, key){
   player_info <- osur::get_player(usr, key)
   player_pp <- osur::get_player_pp(usr, key)
   player_bm_lst <- unique(player_pp$beatmap_id)
-  player_bm <- mapply(osur::get_beatmap, player_bm_lst, key)
+  player_bm <- NULL
+  for(bm_info in player_bm_lst){
+    tmp_info <- get_beatmap(bm_info, key)
+    player_bm <- bind_rows(player_bm, tmp_info)
+  }
+    mapply(osur::get_beatmap, player_bm_lst, key)
 
   play_df <- player_pp %>%
     mutate(user_id = as.numeric(user_id),
@@ -23,8 +28,8 @@ get_player_bm <- function(usr, key){
                         title,
                         artist,
                         bpm,
-                        str_which(names(bm_df), "length"),
-                        str_which(names(.), "diff_")),
+                        contains("length"),
+                        contains("diff")),
                by = "beatmap_id") %>%
     mutate(mods = mapply(mod_detect, enabled_mods),
            bpm = mapply(convert_bpm, bpm, enabled_mods),
