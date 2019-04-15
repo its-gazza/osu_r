@@ -18,7 +18,7 @@ get_player_bm <- function(usr, key){
     inner_join(player_info %>%
                  select(user_id, username),
                by = "user_id") %>%
-    inner_join(bm_df %>%
+    inner_join(player_bm %>%
                  select(beatmap_id,
                         title,
                         artist,
