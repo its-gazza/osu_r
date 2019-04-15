@@ -15,4 +15,10 @@ Imports:
   jsonlite,
   magrittr,
   httr
+Depends:
+  tidyverse,
+  httr,
+  jsonlite,
+  magrittr,
+  httr
   
