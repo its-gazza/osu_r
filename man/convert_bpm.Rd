@@ -2,13 +2,15 @@
 % Please edit documentation in R/convert_bpm.R
 \name{convert_bpm}
 \alias{convert_bpm}
-\title{Title}
+\title{Convert BPM base on mod}
 \usage{
 convert_bpm(bpm, enabled_mods)
 }
 \arguments{
-\item{enabled_mods}{}
+\item{bpm}{beatmap bpm}
+
+\item{enabled_mods}{Mods used}
 }
 \description{
-Title
+Convert BPM base on mod
 }

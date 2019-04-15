@@ -2,13 +2,15 @@
 % Please edit documentation in R/play_df.R
 \name{get_player_bm}
 \alias{get_player_bm}
-\title{Title}
+\title{Get player pp and bm info}
 \usage{
 get_player_bm(usr, key)
 }
 \arguments{
-\item{key}{}
+\item{usr}{user name}
+
+\item{key}{API key}
 }
 \description{
-Title
+Get player pp and bm info
 }

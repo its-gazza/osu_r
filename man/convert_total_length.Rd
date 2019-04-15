@@ -2,13 +2,15 @@
 % Please edit documentation in R/convert_total_length.R
 \name{convert_total_length}
 \alias{convert_total_length}
-\title{Title}
+\title{Convert total length base on mod}
 \usage{
 convert_total_length(total_length, enabled_mods)
 }
 \arguments{
-\item{enabled_mods}{}
+\item{total_length}{total length in beatmap}
+
+\item{enabled_mods}{mod used}
 }
 \description{
-Title
+Convert total length base on mod
 }

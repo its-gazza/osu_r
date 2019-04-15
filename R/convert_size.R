@@ -3,10 +3,8 @@
 #' @param diff_size Beatmap difficulty
 #' @param enabled_mods mods used
 #'
-#' @return
 #' @export
 #'
-#' @examples
 convert_size <- function(diff_size, enabled_mods){
   mod <- mod_detect(enabled_mods)
 

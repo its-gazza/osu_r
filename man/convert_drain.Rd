@@ -2,13 +2,15 @@
 % Please edit documentation in R/convert_drain.R
 \name{convert_drain}
 \alias{convert_drain}
-\title{Title}
+\title{Convert drain base on mod}
 \usage{
 convert_drain(diff_drain, enabled_mods)
 }
 \arguments{
-\item{enabled_mods}{}
+\item{diff_drain}{Drain difficulty}
+
+\item{enabled_mods}{Mods used}
 }
 \description{
-Title
+Convert drain base on mod
 }

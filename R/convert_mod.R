@@ -4,15 +4,23 @@
 #' @param beatmap_id beatmap id
 #' @param enable_mod Mod chosen, note this will take in numeric version of mod
 #' @param key API key, used to get betamap info
+#' @param df beatmap_df
+#' @param method Which method we're using, could be id (Uses api) or df (R dataframe)
 #'
 #' @export
-convert_mod <- function(beatmap_id, enable_mod, key){
+convert_mod <- function(beatmap_id, df, enable_mod, key, method = "id"){
 
   # First we'll need to get the beatmap info
-  bm_info <- get_beatmap(beatmap_id, key) %>%
-    mutate(
-      mods = ""
-    )
+  if(method == "id"){
+    bm_info <- get_beatmap(beatmap_id, key) %>%
+      mutate(
+        mods = ""
+      )
+  } else if (method == "df"){
+    bm_info <- df
+  } else {
+    bm_info <- df
+  }
 
   # Convert mod value to the relevant string
   mod_list <- mod_detect(enable_mod)
@@ -63,5 +71,6 @@ convert_mod <- function(beatmap_id, enable_mod, key){
       )
 
   # Return info
+  bm_info$enable_mode <- mod_list
   return(bm_info)
 }

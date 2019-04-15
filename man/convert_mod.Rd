@@ -5,14 +5,18 @@
 \title{Convert difficulty base on mods
 Base on: https://osu.ppy.sh/help/wiki/Game_Modifiers}
 \usage{
-convert_mod(beatmap_id, enable_mod, key)
+convert_mod(beatmap_id, df, enable_mod, key, method = "id")
 }
 \arguments{
 \item{beatmap_id}{beatmap id}
 
+\item{df}{beatmap_df}
+
 \item{enable_mod}{Mod chosen, note this will take in numeric version of mod}
 
 \item{key}{API key, used to get betamap info}
+
+\item{method}{Which method we're using, could be id (Uses api) or df (R dataframe)}
 }
 \description{
 Convert difficulty base on mods

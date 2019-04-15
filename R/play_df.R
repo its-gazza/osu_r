@@ -1,13 +1,11 @@
 
-#' Title
+#' Get player pp and bm info
 #'
-#' @param usr
-#' @param key
+#' @param usr user name
+#' @param key API key
 #'
-#' @return
 #' @export
 #'
-#' @examples
 get_player_bm <- function(usr, key){
   player_info <- osur::get_player(usr, key)
   player_pp <- osur::get_player_pp(usr, key)

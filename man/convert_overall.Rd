@@ -2,13 +2,15 @@
 % Please edit documentation in R/convert_overall.R
 \name{convert_overall}
 \alias{convert_overall}
-\title{Title}
+\title{Convert overall difficulrt}
 \usage{
 convert_overall(diff_overall, enabled_mods)
 }
 \arguments{
-\item{enabled_mods}{}
+\item{diff_overall}{Beatmap overall difficulty}
+
+\item{enabled_mods}{Mod used}
 }
 \description{
-Title
+Convert overall difficulrt
 }

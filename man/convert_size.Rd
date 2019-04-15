@@ -2,13 +2,15 @@
 % Please edit documentation in R/convert_size.R
 \name{convert_size}
 \alias{convert_size}
-\title{Title}
+\title{Convert size base on mods}
 \usage{
 convert_size(diff_size, enabled_mods)
 }
 \arguments{
-\item{enabled_mods}{}
+\item{diff_size}{Beatmap difficulty}
+
+\item{enabled_mods}{mods used}
 }
 \description{
-Title
+Convert size base on mods
 }

@@ -2,13 +2,15 @@
 % Please edit documentation in R/convert_hit_length.R
 \name{convert_hit_length}
 \alias{convert_hit_length}
-\title{Title}
+\title{Convert hit length base on mods}
 \usage{
 convert_hit_length(hit_length, enabled_mods)
 }
 \arguments{
-\item{enabled_mods}{}
+\item{hit_length}{Beatmap length}
+
+\item{enabled_mods}{Mod used}
 }
 \description{
-Title
+Convert hit length base on mods
 }
