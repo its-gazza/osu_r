@@ -59,7 +59,7 @@ mod_convert <- function(beatmap_id, enable_mod, key){
   # AR convert
   bm_info %<>%
     mutate(
-      diff_approach = ar_convert(diff_approach, enable_mod)
+      diff_approach = convert_ar(diff_approach, enable_mod)
       )
 
   # Return info
