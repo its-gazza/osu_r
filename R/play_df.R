@@ -6,7 +6,7 @@
 #'
 #' @export
 #'
-get_player_bm <- function(usr, key){
+get_player_bm <- function(usr, key = key){
   player_info <- osur::get_player(usr, key)
   player_pp <- osur::get_player_pp(usr, key)
   player_bm_lst <- unique(player_pp$beatmap_id)
@@ -36,7 +36,6 @@ get_player_bm <- function(usr, key){
            total_length = mapply(convert_total_length, total_length, enabled_mods),
            hit_length = mapply(convert_hit_length, hit_length, enabled_mods),
            diff_size = mapply(convert_size, diff_size, enabled_mods),
-           # diff_overall = mapply(convert_overall, diff_overall, enabled_mods),
            diff_approach = mapply(convert_ar, diff_approach, enabled_mods),
            diff_drain = mapply(convert_drain, diff_drain, enabled_mods)
     )
