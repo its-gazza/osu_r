@@ -10,16 +10,15 @@
 #' @export
 
 get_player_pp <- function(user,
-                          key,
                           type = "string",
+                          key = key,
                           limit = 100){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_user_best",
-    query =
-      list(k = key,
-           u = user,
-           limit = limit,
-           type = type)
+    query = list(k = key,
+                 u = user,
+                 limit = limit,
+                 type = type)
   )
 
   # Check if the api key is correct

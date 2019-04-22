@@ -6,12 +6,11 @@
 #' @param key osu! API key
 #' @export
 
-get_beatmap <- function(beatmap_id, key){
+get_beatmap <- function(beatmap_id, key = key){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_beatmaps",
-    query =
-      list(k = key,
-           b = beatmap_id)
+    query = list(k = key,
+                 b = beatmap_id)
   )
 
   # Check if the api key is valid
