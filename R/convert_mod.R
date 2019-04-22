@@ -19,7 +19,7 @@ convert_mod <- function(beatmap_id, df, enable_mod, key, method = "id"){
   } else if (method == "df"){
     bm_info <- df
   } else {
-    bm_info <- df
+    return(warning("Method not specified"))
   }
 
   # Convert mod value to the relevant string
