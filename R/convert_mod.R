@@ -17,7 +17,8 @@ convert_mod <- function(beatmap_id, df, enable_mod, key, method = "id"){
         mods = ""
       )
   } else if (method == "df"){
-    bm_info <- df
+    bm_info <- df %>%
+      filter(beatmap_id == !!beatmap_id)
   } else {
     return(warning("Method not specified"))
   }
