@@ -8,13 +8,13 @@
 #' @param method Which method we're using, could be id (Uses api) or df (R dataframe)
 #'
 #' @export
-convert_mod <- function(beatmap_id, df, enable_mod, key, method = "id"){
+convert_mod <- function(beatmap_id, enable_mod, key, method = "id", df = NA){
 
   # First we'll need to get the beatmap info
   if(method == "id"){
     bm_info <- get_beatmap(beatmap_id, key) %>%
       mutate(
-        mods = ""
+        mods = enable_mod
       )
   } else if (method == "df"){
     bm_info <- df %>%
@@ -72,6 +72,6 @@ convert_mod <- function(beatmap_id, df, enable_mod, key, method = "id"){
       )
 
   # Return info
-  bm_info$enable_mode <- mod_list
-  return(bm_info)
+  bm_info$mod_name <- mod_list
+  return(bm_info %>% as_tibble())
 }

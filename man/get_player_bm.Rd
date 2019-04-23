@@ -4,7 +4,7 @@
 \alias{get_player_bm}
 \title{Get player pp and bm info}
 \usage{
-get_player_bm(usr, key)
+get_player_bm(usr, key = key)
 }
 \arguments{
 \item{usr}{user name}

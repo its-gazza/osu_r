@@ -4,15 +4,15 @@
 \alias{get_player_pp}
 \title{Get player pp info}
 \usage{
-get_player_pp(user, key, type = "string", limit = 100)
+get_player_pp(user, type = "string", key = key, limit = 100)
 }
 \arguments{
 \item{user}{Username or user_id. If using user_id, need to set
 \code{type} to \code{id}}
 
-\item{key}{osu! API key}
-
 \item{type}{Specify if user is \code{string} or \code{id}}
+
+\item{key}{osu! API key}
 
 \item{limit}{Amount of results. Default to max 100}
 }
