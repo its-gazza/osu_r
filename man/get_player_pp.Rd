@@ -4,7 +4,7 @@
 \alias{get_player_pp}
 \title{Get player pp info}
 \usage{
-get_player_pp(user, type = "string", key = key, limit = 100)
+get_player_pp(user, type = "string", api_key = key, limit = 100)
 }
 \arguments{
 \item{user}{Username or user_id. If using user_id, need to set
@@ -12,9 +12,9 @@ get_player_pp(user, type = "string", key = key, limit = 100)
 
 \item{type}{Specify if user is \code{string} or \code{id}}
 
-\item{key}{osu! API key}
-
 \item{limit}{Amount of results. Default to max 100}
+
+\item{key}{osu! API key}
 }
 \description{
 \code{get_player_pp} return a tibble dataframe with player's top 100 plays

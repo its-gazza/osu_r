@@ -4,13 +4,13 @@
 \alias{get_player}
 \title{Get player info}
 \usage{
-get_player(user, key, type = "string")
+get_player(user, api_key, type = "string")
 }
 \arguments{
 \item{user}{Username or user_id. If using user_id, need to set
 \code{type} to \code{id}}
 
-\item{key}{osu! API key}
+\item{api_key}{osu! API key}
 
 \item{type}{Specify if user is \code{string} or \code{id}}
 }

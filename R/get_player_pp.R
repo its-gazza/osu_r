@@ -11,11 +11,11 @@
 
 get_player_pp <- function(user,
                           type = "string",
-                          key = key,
+                          api_key = key,
                           limit = 100){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_user_best",
-    query = list(k = key,
+    query = list(k = api_key,
                  u = user,
                  limit = limit,
                  type = type)

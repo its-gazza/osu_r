@@ -4,17 +4,17 @@
 #'
 #' @param user Username or user_id. If using user_id, need to set
 #' \code{type} to \code{id}
-#' @param key osu! API key
+#' @param api_key osu! API key
 #' @param type Specify if user is \code{string} or \code{id}
 #' @export
 
 get_player <- function(user,
-                       key,
+                       api_key,
                        type = "string"){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_user",
     query =
-      list(k = key,
+      list(k = api_key,
            u = user,
            type = type)
   )
