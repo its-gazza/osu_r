@@ -5,10 +5,10 @@
 #' @param enable_mod Mod chosen, note this will take in numeric version of mod
 #' @param key API key, used to get betamap info
 #' @param df beatmap_df
-#' @param method Which method we're using, could be id (Uses api) or df (R dataframe)
+#' @param method Which method we're using, could be `api` (Uses api) or `local` (R dataframe)
 #'
 #' @export
-convert_mod <- function(beatmap_id, enable_mod, key, method = "id", df = NA){
+convert_all <- function(beatmap_id, enable_mod, key, method = "api", df = NA){
 
   # First we'll need to get the beatmap info
   if(method == "id"){
