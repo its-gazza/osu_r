@@ -5,8 +5,8 @@
 #'
 #' @export
 
-convert_drain <- function(diff_drain, enabled_mods){
-  mod <- mod_detect(enabled_mods)
+osu_convert_drain <- function(diff_drain, enabled_mods){
+  mod <- osu_detect_mod(enabled_mods)
 
   if(str_detect(mod, "HR")){
     diff_drain = min(diff_drain * 1.4, 10)

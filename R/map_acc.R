@@ -7,8 +7,8 @@
 #' @param count100 Total number of 100s
 #' @param count300 Total number of 300s
 #' @export
-map_acc <- function(count50, count100, count300){
+osu_map_acc <- function(count50, count100, count300){
   accuracy <- (50*count50 + 100*count100 + 300*count300)/
-      (300*(count50 + count100 + count300)) * 100
+    (300*(count50 + count100 + count300)) * 100
   return(round(accuracy, 2))
 }

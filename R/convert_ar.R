@@ -1,13 +1,13 @@
 #' Calculate AR base on mod
 #' This function calculate new AR base on mod
 #'
+#' @param enable_mod mod used
 #' @param ar original AR
-#' @param enalbe_mod mod applied. Note this takes in the numeric version of mod
 #'
 #' @export
-convert_ar <- function(ar, enable_mod){
+osu_convert_ar <- function(ar, enable_mod){
   # Convert numeric mod to character mod
-  mod_list <- mod_detect(enable_mod)
+  mod_list <- osu_detect_mod(enable_mod)
 
   # HR and EZ are easy to calculate as it is universal among all AR
   if(str_detect(mod_list, "HR")){

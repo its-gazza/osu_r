@@ -8,9 +8,9 @@
 #' @param type Specify if user is \code{string} or \code{id}
 #' @export
 
-get_player <- function(user,
-                       api_key,
-                       type = "string"){
+osu_get_player_info <- function(user,
+                                api_key,
+                                type = "string"){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_user",
     query =

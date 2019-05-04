@@ -6,8 +6,8 @@
 
 #' @export
 
-convert_overall <- function(diff_overall, enabled_mods){
-  mod <- mod_detect(enabled_mods)
+osu_convert_overall <- function(diff_overall, enabled_mods){
+  mod <- osu_detect_mod(enabled_mods)
 
   if(str_detect(mod, "HR")){
     diff_overall = min(diff_overall * 1.4, 10)

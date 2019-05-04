@@ -4,15 +4,16 @@
 #'
 #' @param user Username or user_id. If using user_id, need to set
 #' \code{type} to \code{id}
-#' @param key osu! API key
 #' @param type Specify if user is \code{string} or \code{id}
+#' @param api_key api key
 #' @param limit Amount of results. Default to max 100
+#'
 #' @export
 
-get_player_pp <- function(user,
-                          type = "string",
-                          api_key = key,
-                          limit = 100){
+osu_get_player_pp <- function(user,
+                              type = "string",
+                              api_key = key,
+                              limit = 100){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_user_best",
     query = list(k = api_key,

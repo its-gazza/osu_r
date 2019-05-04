@@ -4,15 +4,14 @@
 #' @param beatmap_id beatmap id
 #' @param enable_mod Mod chosen, note this will take in numeric version of mod
 #' @param key API key, used to get betamap info
-#' @param df beatmap_df
+#' @param df if local selected, the df that contains the beatmap info
 #' @param method Which method we're using, could be `api` (Uses api) or `local` (R dataframe)
 #'
 #' @export
-convert_all <- function(beatmap_id, enable_mod, key, method = "api", df = NA){
-
-  # First we'll need to get the beatmap info
+osu_convert_mod <- function(beatmap_id, enable_mod, key, method = "api", df = NA){
+  # Retrieve beatmap info
   if(method == "id"){
-    bm_info <- get_beatmap(beatmap_id, key) %>%
+    bm_info <- osu_get_beatmap(beatmap_id, key) %>%
       mutate(
         mods = enable_mod
       )
@@ -24,7 +23,7 @@ convert_all <- function(beatmap_id, enable_mod, key, method = "api", df = NA){
   }
 
   # Convert mod value to the relevant string
-  mod_list <- mod_detect(enable_mod)
+  mod_list <- osu_detect_mod(enable_mod)
 
   # Alter difficulty base on mods
   # AR is handled at the end as the calculation is not straight forward
@@ -68,8 +67,8 @@ convert_all <- function(beatmap_id, enable_mod, key, method = "api", df = NA){
   # AR convert
   bm_info %<>%
     mutate(
-      diff_approach = convert_ar(diff_approach, enable_mod)
-      )
+      diff_approach = osu_convert_ar(diff_approach, enable_mod)
+    )
 
   # Return info
   bm_info$mod_name <- mod_list

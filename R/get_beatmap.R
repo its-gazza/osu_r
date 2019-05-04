@@ -2,11 +2,12 @@
 #'
 #' \code{get_beatmap} return a tibble dataframe with the appropriate class
 #'
+#' @param api_key api key
 #' @param beatmap_id Beatmap Id
-#' @param key osu! API key
+#'
 #' @export
 
-get_beatmap <- function(beatmap_id, api_key = key){
+osu_get_beatmap <- function(beatmap_id, api_key = key){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_beatmaps",
     query = list(k = api_key,

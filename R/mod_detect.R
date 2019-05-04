@@ -7,7 +7,7 @@
 #'
 #' @export
 
-mod_detect <- function(value){
+osu_detect_mod <- function(value){
   # Convert value to binary
   string <- intToBits(value)
 
