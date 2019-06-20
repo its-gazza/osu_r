@@ -1,0 +1,4 @@
+language: r
+
+script:
+  - R -e 'devtools::check()'
