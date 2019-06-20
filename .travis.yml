@@ -1,4 +1,12 @@
-language: r
+language: R
+cache: packages
 
 script:
   - R -e 'devtools::check()'
+
+r_packeages:
+  - tidyverse
+  - magrittr
+  - httr
+  - jsonlite
+  - devtools
