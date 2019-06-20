@@ -5,7 +5,7 @@
 #' @param ar original AR
 #'
 #' @export
-osu_convert_ar <- function(ar, enable_mod){
+convert_ar <- function(ar, enable_mod){
   # Convert numeric mod to character mod
   mod_list <- osu_detect_mod(enable_mod)
 

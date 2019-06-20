@@ -8,7 +8,7 @@
 #' @param method Which method we're using, could be `api` (Uses api) or `local` (R dataframe)
 #'
 #' @export
-osu_convert_mod <- function(beatmap_id, enable_mod, key, method = "api", df = NA){
+convert_mod <- function(beatmap_id, enable_mod, key, method = "api", df = NA){
   # Retrieve beatmap info
   if(method == "id"){
     bm_info <- osu_get_beatmap(beatmap_id, key) %>%
@@ -16,8 +16,7 @@ osu_convert_mod <- function(beatmap_id, enable_mod, key, method = "api", df = NA
         mods = enable_mod
       )
   } else if (method == "df"){
-    bm_info <- df %>%
-      filter(beatmap_id == !!beatmap_id)
+    bm_info <- df
   } else {
     return(warning("Method not specified"))
   }

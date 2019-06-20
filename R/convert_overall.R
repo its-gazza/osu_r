@@ -3,10 +3,8 @@
 #' @param diff_overall Beatmap overall difficulty
 #' @param enabled_mods Mod used
 #'
-
 #' @export
-
-osu_convert_overall <- function(diff_overall, enabled_mods){
+convert_overall <- function(diff_overall, enabled_mods){
   mod <- osu_detect_mod(enabled_mods)
 
   if(str_detect(mod, "HR")){

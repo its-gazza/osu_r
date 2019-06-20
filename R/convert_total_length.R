@@ -5,7 +5,7 @@
 #'
 #' @export
 #'
-osu_convert_total_length <- function(total_length, enabled_mods){
+convert_total_length <- function(total_length, enabled_mods){
   mod <- osu_detect_mod(enabled_mods)
   if(str_detect(mod, "DT")){
     total_length = total_length * 3/2

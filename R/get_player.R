@@ -1,6 +1,6 @@
 #' Get player info
 #'
-#' \code{get_player} return a tibble dataframe with player's info
+#' \code{get_user} return a tibble dataframe with player's info
 #'
 #' @param user Username or user_id. If using user_id, need to set
 #' \code{type} to \code{id}
@@ -8,9 +8,9 @@
 #' @param type Specify if user is \code{string} or \code{id}
 #' @export
 
-osu_get_player_info <- function(user,
-                                api_key,
-                                type = "string"){
+get_user <- function(user,
+                     api_key,
+                     type = "string"){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_user",
     query =

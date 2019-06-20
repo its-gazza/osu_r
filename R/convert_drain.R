@@ -5,7 +5,7 @@
 #'
 #' @export
 
-osu_convert_drain <- function(diff_drain, enabled_mods){
+convert_drain <- function(diff_drain, enabled_mods){
   mod <- osu_detect_mod(enabled_mods)
 
   if(str_detect(mod, "HR")){

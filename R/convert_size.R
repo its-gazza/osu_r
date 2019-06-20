@@ -5,7 +5,7 @@
 #'
 #' @export
 #'
-osu_convert_size <- function(diff_size, enabled_mods){
+convert_size <- function(diff_size, enabled_mods){
   mod <- osu_detect_mod(enabled_mods)
 
   # Hard Rock

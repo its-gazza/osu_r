@@ -1,6 +1,6 @@
 #' Get player pp info
 #'
-#' \code{get_player_pp} return a tibble dataframe with player's top 100 plays
+#' \code{get_user_best} return a tibble dataframe with player's top 100 plays
 #'
 #' @param user Username or user_id. If using user_id, need to set
 #' \code{type} to \code{id}
@@ -10,10 +10,10 @@
 #'
 #' @export
 
-osu_get_player_pp <- function(user,
-                              type = "string",
-                              api_key = key,
-                              limit = 100){
+get_user_best <- function(user,
+                          type = "string",
+                          api_key = key,
+                          limit = 100){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_user_best",
     query = list(k = api_key,
