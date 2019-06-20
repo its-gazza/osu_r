@@ -11,3 +11,4 @@ r_packages:
   - httr
   - jsonlite
   - devtools
+  - roxygen2
