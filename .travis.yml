@@ -2,6 +2,7 @@ language: R
 cache: packages
 
 script:
+  - R -e 'install.packages('devtools')'
   - R -e 'devtools::check()'
 
 r_packeages:
