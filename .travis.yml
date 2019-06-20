@@ -5,7 +5,7 @@ script:
   - R -e 'install.packages('devtools')'
   - R -e 'devtools::check()'
 
-r_packeages:
+r_packages:
   - tidyverse
   - magrittr
   - httr
