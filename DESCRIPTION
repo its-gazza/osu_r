@@ -15,4 +15,5 @@ Imports:
   jsonlite,
   magrittr,
   httr
-  
+Suggests: 
+    testthat
