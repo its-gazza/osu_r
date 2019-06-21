@@ -16,4 +16,4 @@ Imports:
   magrittr,
   httr
 Suggests: 
-    testthat
+    testthat (>= 2.1.0)
