@@ -7,7 +7,7 @@
 #'
 #' @export
 
-osu_get_beatmap <- function(beatmap_id, api_key = key){
+get_beatmap <- function(beatmap_id, api_key = key){
   get_info <- GET(
     "https://osu.ppy.sh/api/get_beatmaps",
     query = list(k = api_key,
