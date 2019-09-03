@@ -15,10 +15,5 @@ Imports:
   jsonlite,
   magrittr,
   httr
-Depends:
-  tidyverse,
-  httr,
-  jsonlite,
-  magrittr,
-  httr
-  
+Suggests: 
+    testthat (>= 2.1.0)

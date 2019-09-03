@@ -1,5 +1,8 @@
-
 # osur: Package to import osu data to R
+
+<!-- badges: start -->
+[![Travis build status](https://travis-ci.org/its-gazza/osur.svg?branch=master)](https://travis-ci.org/its-gazza/osur)
+<!-- badges: end -->
 
 ## Installation
 
