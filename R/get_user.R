@@ -32,25 +32,6 @@ get_user <- function(user,
   player_info <- get_info %>%
     httr::content(as = "text") %>%
     jsonlite::fromJSON() %>%
-    dplyr::mutate(
-      user_id = as.numeric(user_id),
-      playcount = as.numeric(playcount),
-      pp_rank = as.numeric(pp_rank),
-      level = as.numeric(level),
-      pp_raw = as.numeric(pp_raw),
-      accuracy = round(as.numeric(accuracy, 4)),
-      count_rank_ss = as.numeric(count_rank_ss),
-      count_rank_ssh = as.numeric(count_rank_ssh),
-      count_rank_s = as.numeric(count_rank_s),
-      count_rank_sh = as.numeric(count_rank_sh),
-      count_rank_a = as.numeric(count_rank_a),
-      total_seconds_played = as.numeric(total_seconds_played),
-      pp_country_rank = as.numeric(pp_country_rank),
-      count300 = as.numeric(count300),
-      count100 = as.numeric(count100),
-      count50 = as.numeric(count50),
-      ranked_score = as.numeric(ranked_score),
-      total_score = as.numeric(total_score)) %>%
     dplyr::select(
       dplyr::everything(),
       -events
