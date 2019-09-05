@@ -12,12 +12,14 @@ get_beatmap <- function(beatmap_id, api_key){
   )
 
   # Check if request is good
-  if(get_info$status_code != 200){
-    return(warnings(glue::glue("Error: Code {get_info$status_code}")))
+  if(get_info$status_code == 401){
+    warning(glue::glue("Incorrect API key: {api_key}"))
+    return()
   }
   # Check if beatmap id is valid
-  if(is.null(httr::content(get_info)[1][[1]])){
-    return(warnings(glue::glue("Beatmap id {beatmap_id} is invalid")))
+  if(httr::content(get_info, as = "text") == "[]"){
+    warning(glue::glue("Beatmap id {beatmap_id} is invalid"))
+    return()
   }
 
   # Convert data to proper class
