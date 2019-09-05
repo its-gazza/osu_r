@@ -1,4 +1,4 @@
 ^osur\.Rproj$
 ^\.Rproj\.user$
-^\.gitlab-ci\.yml$
+^\.travis\.yml$
 ^LICENSE\.md$
