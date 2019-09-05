@@ -1,6 +1,7 @@
 # osur
 
 <!-- badges: start -->
+[![Codecov test coverage](https://codecov.io/gh/its-gazza/osur/branch/master/graph/badge.svg)](https://codecov.io/gh/its-gazza/osur?branch=master)
 <!-- badges: end -->
 
 The goal of osur is to ...
