@@ -1,21 +1,23 @@
 Package: osur
-Type: Package
-Title: osu! api package
-Version: 0.1.0
-Author: Gary Lau
-Maintainer: Gary Lau <gary.lkw95@gmail.com>
-Description: A longer Description
-License: MIT
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Gary",
+           family = "Lau",
+           role = c("aut", "cre"),
+           email = "gary.lkw95@gmail.com")
+Description: What the package does (one paragraph).
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
-Imports:
-  dplyr,
-  magrittr,
-  stringr,
-  httr,
-  jsonlite,
-  magrittr,
-  httr
+Imports: 
+    magrittr,
+    stringr,
+    httr,
+    jsonlite,
+    dplyr,
+    glue
 Suggests: 
     testthat (>= 2.1.0)

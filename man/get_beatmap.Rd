@@ -2,15 +2,18 @@
 % Please edit documentation in R/get_beatmap.R
 \name{get_beatmap}
 \alias{get_beatmap}
-\title{Get beatmap info}
+\title{Get Beatmap info}
 \usage{
-get_beatmap(beatmap_id, api_key = key)
+get_beatmap(beatmap_id, api_key)
 }
 \arguments{
-\item{beatmap_id}{Beatmap Id}
+\item{beatmap_id}{Beatmap id}
 
-\item{api_key}{api key}
+\item{api_key}{osu! api key}
+}
+\value{
+tibble()
 }
 \description{
-\code{get_beatmap} return a tibble dataframe with the appropriate class
+Get Beatmap info
 }
