@@ -18,6 +18,7 @@ Imports:
     httr,
     jsonlite,
     dplyr,
-    glue
+    glue,
+    tidyselect
 Suggests: 
     testthat (>= 2.1.0)
