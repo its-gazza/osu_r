@@ -4,7 +4,7 @@
 \alias{get_user}
 \title{Get player info}
 \usage{
-get_user(user, api_key, type = "string")
+get_user(user, api_key, type = "string", string = FALSE, id = FALSE)
 }
 \arguments{
 \item{user}{Username or user_id. If using user_id, need to set
@@ -13,6 +13,10 @@ get_user(user, api_key, type = "string")
 \item{api_key}{osu! API key}
 
 \item{type}{Specify if user is \code{string} or \code{id}}
+
+\item{string}{Whether if user is a string}
+
+\item{id}{Whether if user is and id}
 }
 \description{
 \code{get_user} return a tibble dataframe with player's info

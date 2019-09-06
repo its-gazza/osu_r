@@ -15,9 +15,9 @@ test_that("User api", {
   user <- 'thematrixk'
   user_info <- get_user(user = 'thematrixk',
                         api_key = osu_api,
-                        type = 'string')
+                        string = TRUE)
 
   expect_equal(tolower(user_info$username), user)
-  expect_warning(get_user('thematrixk', 123, 'string')) # Incorrect api
-  expect_warning(get_user('thematrixk', osu_api, 'id')) # Incorrect type
+  expect_warning(get_user('thematrixk', 123, string = TRUE)) # Incorrect api
+  expect_warning(get_user('thematrixk', osu_api, id = TRUE)) # Incorrect type
 })
