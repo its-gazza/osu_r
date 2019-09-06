@@ -15,6 +15,10 @@ get_user <- function(user,
                         query = list(k = api_key,
                                      u = user,
                                      type = type))
+  # Check API
+  if(api_key == ""){
+    warning("No API key supplied")
+  }
 
   # Check if request is good
   if(get_info$status_code == 401){

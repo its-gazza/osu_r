@@ -10,6 +10,10 @@ get_beatmap <- function(beatmap_id, api_key){
     query = list(k = api_key,
                  b = beatmap_id)
   )
+  # Check API
+  if(api_key == ""){
+    warning("No API key supplied")
+  }
 
   # Check if request is good
   if(get_info$status_code == 401){

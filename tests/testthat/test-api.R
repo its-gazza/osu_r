@@ -10,14 +10,14 @@ test_that("Beatmap api", {
   expect_warning(get_beatmap('1944412', 'weird_api'))
 })
 
-# test_that("User api", {
-#   osu_api <- Sys.getenv('osu_api')
-#   user <- 'thematrixk'
-#   user_info <- get_user(user = 'thematrixk',
-#                         api_key = osu_api,
-#                         type = 'string')
-#
-#   expect_equal(tolower(user_info$username), user)
-#   expect_warning(get_user('thematrixk', 123, 'string')) # Incorrect api
-#   expect_warning(get_user('thematrixk', osu_api, 'id')) # Incorrect type
-# })
+test_that("User api", {
+  osu_api <- Sys.getenv('osu_api')
+  user <- 'thematrixk'
+  user_info <- get_user(user = 'thematrixk',
+                        api_key = osu_api,
+                        type = 'string')
+
+  expect_equal(tolower(user_info$username), user)
+  expect_warning(get_user('thematrixk', 123, 'string')) # Incorrect api
+  expect_warning(get_user('thematrixk', osu_api, 'id')) # Incorrect type
+})
