@@ -4,6 +4,7 @@ test_that("Beatmap api", {
   osu_api <- Sys.getenv('osu_api')
   bm_info <- get_beatmap(beatmap_id = 1944412, api_key = osu_api)
 
+  print(bm_info$beatmap_id)
   expect_equal(bm_info$beatmap_id, '1944412')
   expect_warning(get_beatmap(beatmap_id = 'abcd', osu_api))
   expect_warning(get_beatmap('1944412', 'weird_api'))
