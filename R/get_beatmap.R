@@ -4,6 +4,7 @@
 #' @param api_key osu! api key
 #'
 #' @return tibble()
+#' @export
 get_beatmap <- function(beatmap_id, api_key){
   get_info <- httr::GET(
     url = "https://osu.ppy.sh/api/get_beatmaps",
