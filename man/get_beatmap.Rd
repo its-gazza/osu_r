@@ -4,7 +4,7 @@
 \alias{get_beatmap}
 \title{Get Beatmap info}
 \usage{
-get_beatmap(beatmap_id, api_key)
+get_beatmap(beatmap_id, api_key = NULL)
 }
 \arguments{
 \item{beatmap_id}{Beatmap id}
