@@ -12,7 +12,7 @@
 #' @export
 
 get_user <- function(user,
-                     api_key,
+                     api_key = NULL,
                      type = "string",
                      string = FALSE,
                      id = FALSE){
@@ -27,7 +27,7 @@ get_user <- function(user,
   type <- ifelse(string, 'string', 'id')
 
   # Check API
-  if(api_key == ""){
+  if(is.null(api_key)){
     warning("No API key supplied")
     return()
   }

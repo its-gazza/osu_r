@@ -5,14 +5,14 @@
 #'
 #' @return tibble()
 #' @export
-get_beatmap <- function(beatmap_id, api_key){
+get_beatmap <- function(beatmap_id, api_key = NULL){
   get_info <- httr::GET(
     url = "https://osu.ppy.sh/api/get_beatmaps",
     query = list(k = api_key,
                  b = beatmap_id)
   )
   # Check API
-  if(api_key == ""){
+  if(is.null(api_key)){
     warning("No API key supplied")
   }
 
