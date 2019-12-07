@@ -7,7 +7,7 @@
 #' @export
 convert_ar <- function(ar, enable_mod){
   # Convert numeric mod to character mod
-  mod_list <- osu_detect_mod(enable_mod)
+  mod_list <- osur::osu_detect_mod(enable_mod)
 
   # HR and EZ are easy to calculate as it is universal among all AR
   if(stringr::str_detect(mod_list, "HR")){
@@ -23,7 +23,7 @@ convert_ar <- function(ar, enable_mod){
                1200 - (ar-5) * 150)
 
   # Convert HT and DT
-  if(sringr::str_detect(mod_list, "HT")){
+  if(stringr::str_detect(mod_list, "HT")){
     ms <- ms * 4/3
   }
   if(stringr::str_detect(mod_list, "DT|NC")){
