@@ -4,8 +4,7 @@
 \alias{get_user}
 \title{Get player info}
 \usage{
-get_user(user, api_key = NULL, type = "string", string = FALSE,
-  id = FALSE)
+get_user(user, api_key = NULL, type = "string", string = FALSE, id = FALSE)
 }
 \arguments{
 \item{user}{Username or user_id. If using user_id, need to set
