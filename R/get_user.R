@@ -55,7 +55,7 @@ get_user <- function(user,
     jsonlite::fromJSON() %>%
     dplyr::select(
       dplyr::everything(),
-      -events
+      -'events'
     )
 
   return(player_info)
