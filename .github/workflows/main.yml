@@ -4,6 +4,7 @@ on: push
 jobs:
   build:
     runs-on: ubuntu-18.04
+    container: rocker/verse:latest
 
     steps:
       - name: Checkout Repository
@@ -21,5 +22,6 @@ jobs:
 
       - name: Code Coverage
         run: Rscript -e "covr::codecov(quiet = FALSE, commit = '$GITHUB_SHA', branch = '$GITHUB_REF', token = '$${{ secrets.CODECOV_TOKEN }}')"
-    container: rocker/verse:latest
+        env:
+          osu_api: ${{secrets.osu_api}}
 
