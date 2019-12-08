@@ -1,20 +1,13 @@
-name: R package
-
-on: [push]
-
+name: Test
+'on': push
 jobs:
   build:
-    runs-on: ubuntu-latest
-
-    container:
-      image: rocker/verse:latest
-
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout Repository
         uses: actions/checkout@master
-
       - name: Install Package Dependencies
         run: |-
-          Rscript -e "install.packages('remotes')"
-          Rscript -e "remotes::install_deps(dependencies = TRUE)"
-
+          Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+          Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+    container: rocker/verse:latest
