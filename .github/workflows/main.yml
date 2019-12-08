@@ -16,4 +16,6 @@ jobs:
 
       - name: Check Package
         run: Rscript -e "devtools::check()"
+        with:
+          osu_api: ${{secrets.osu_api}}
     container: rocker/verse:latest
