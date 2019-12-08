@@ -1,5 +1,5 @@
-name: Test
-'on': push
+name: Test Package
+on: push
 
 jobs:
   build:
@@ -11,11 +11,15 @@ jobs:
 
       - name: Install Package Dependencies
         run: |-
-          Rscript -e "install.packages('remotes', repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
+          Rscript -e "install.packages(c('remotes', 'covr'), repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
           Rscript -e "remotes::install_deps(dependencies = TRUE, repos = 'https://demo.rstudiopm.com/all/__linux__/bionic/latest')"
 
       - name: Check Package
         run: Rscript -e "devtools::check()"
         env:
           osu_api: ${{secrets.osu_api}}
+
+      - name: Code Coverage
+        run: Rscript -e "covr::codecov(quiet = FALSE, commit = '$GITHUB_SHA', branch = '$GITHUB_REF', token = '$${{ secrets.CODECOV_TOKEN }}')"
     container: rocker/verse:latest
+
