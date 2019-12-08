@@ -7,7 +7,7 @@ jobs:
 
     steps:
       - name: Update image
-        run: sudo apt-get update
+        run: sudo apt-get update && apt-get upgrade
 
       - name: Checkout Repository
         uses: actions/checkout@master
