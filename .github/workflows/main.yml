@@ -6,11 +6,8 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - name: Update image
-        run: sudo apt-get update && apt-get upgrade
-
       - name: Checkout Repository
-        uses: actions/checkout@master
+        uses: actions/checkout@v1
 
       - name: Install Package Dependencies
         run: |-
