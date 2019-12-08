@@ -2,17 +2,15 @@
 % Please edit documentation in R/convert_mod.R
 \name{convert_ar}
 \alias{convert_ar}
-\title{Calculate AR base on mod
-This function calculate new AR base on mod}
+\title{Convert AR}
 \usage{
 convert_ar(ar, enable_mod)
 }
 \arguments{
-\item{ar}{original AR}
+\item{ar}{Original AR}
 
-\item{enable_mod}{mod used}
+\item{enable_mod}{mod(s) used}
 }
 \description{
-Calculate AR base on mod
-This function calculate new AR base on mod
+Convert AR
 }
