@@ -1,0 +1,20 @@
+name: R package
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    container:
+      image: r-base:latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Install Package Dependencies
+        run: |-
+          Rscript -e "install.packages('remotes')"
+          Rscript -e "remotes::install_deps(dependencies = TRUE)"
+
