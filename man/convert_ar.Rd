@@ -7,10 +7,24 @@
 convert_ar(ar, enable_mod)
 }
 \arguments{
-\item{ar}{Original AR}
+\item{ar}{Beatmap's original AR}
 
 \item{enable_mod}{mod(s) used}
 }
 \description{
-Convert AR
+Return converted AR given mod selected
+}
+\details{
+Half Time:
+\itemize{
+\item new ar = old ar \* (4/3)
+Hard Rock:
+\item new ar = ar \* 1.4 (capped to 10)
+Easy:
+\item new ar = ar \\ 2
+}
+}
+\examples{
+convert_ar(9,0) # No Mod
+convert_ar(9, 256) # Half Time
 }

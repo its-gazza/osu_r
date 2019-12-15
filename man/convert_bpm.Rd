@@ -7,7 +7,7 @@
 convert_bpm(bpm, enabled_mods)
 }
 \arguments{
-\item{bpm}{Original BMP}
+\item{bpm}{Beatmap's original BPM}
 
 \item{enabled_mods}{Mod(s) used}
 }

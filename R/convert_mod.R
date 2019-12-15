@@ -1,8 +1,24 @@
 #' Convert AR
 #'
-#' @param ar Original AR
+#' Return converted AR given mod selected
+#'
+#' Hard Rock:
+#'   * new ar = ar \* 1.4 (capped to 10)
+#' Easy:
+#'   * new ar = ar \\ 2
+#'
+#'
+#' Half Time and Double Time's calculation is not as simple as Hard Rock or Easy
+#' as it is dependent by its relevant ms
+#'
+#'
+#'
+#' @param ar Beatmap's original AR
 #' @param enable_mod mod(s) used
 #'
+#' @examples
+#' convert_ar(9,0) # No Mod
+#' convert_ar(9, 256) # Half Time
 #' @export
 convert_ar <- function(ar, enable_mod){
   # Convert numeric mod to character mod
@@ -43,7 +59,7 @@ convert_ar <- function(ar, enable_mod){
 
 #' Convert BPM
 #'
-#' @param bpm Original BMP
+#' @param bpm Beatmap's original BPM
 #' @param enabled_mods Mod(s) used
 #'
 #' @return Converted BPM
